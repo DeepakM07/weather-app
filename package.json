@@ -1,5 +1,5 @@
 {
-
+  "homepage": "https://DeepakM07.github.io/weather-app",
   "name": "weather-app",
 
   "version": "0.1.0",
@@ -32,7 +32,11 @@
 
     "test": "react-scripts test",
 
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+
+    "predeploy": "npm run build",
+
+    "deploy": "gh-pages -d build"
 
   },
 
