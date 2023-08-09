@@ -1,0 +1,32 @@
+SELECT l.city, l.country, wd.temperature
+FROM locations l
+JOIN weather wd ON l.id = wd.location_id
+WHERE wd.date_time::DATE = '2023-08-01' 
+  AND wd.temperature > 30.0; 
+  
+  
+  
+  SELECT * FROM locations;
+  
+  
+  SELECT COUNT(*) AS location_count
+FROM locations l
+JOIN weather wd ON l.id = wd.location_id
+WHERE wd.date_time::DATE = '2023-08-01' 
+  AND wd.weather_condition IN ('Clear');
+  
+  
+  
+  SELECT l.city, l.country
+FROM locations l
+LEFT JOIN weather wd ON l.id = wd.location_id
+WHERE wd.id IS NULL;
+
+
+
+SELECT AVG(temperature) AS average_temperature
+FROM weather
+WHERE location_id = 4 
+  AND date_time::DATE = '2023-08-02';
+  
+  
